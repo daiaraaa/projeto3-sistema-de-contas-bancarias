@@ -1,11 +1,13 @@
-const SavingsAccount= require('./SavingsAccount')
 const BankAccount = require('./BankAccount')
+const SavingsAccount = require('./SavingsAccount')
 
-const percyAccount = new BankAccount('Percy')
-percyAccount.deposit(650)
-percyAccount.withdraw(300)
+const account1 = new BankAccount('Asta', 1000.00)
+const account2 = new SavingsAccount('Noelle', 1.5, 2000)
 
-const groverAccount = new SavingsAccount('Grover', 1.5)
-groverAccount.deposit(1400)
-groverAccount.applyInterest()
-groverAccount.withdraw(500)
+account1.deposit(500)
+account1.withdraw(300)
+
+console.log('========================================================')
+
+account2.applyInterest()
+account2.withdraw(500)
